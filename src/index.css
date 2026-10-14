@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #fbf3e4;
+    --surface: #fffaf0;
+    --surface2: #f6e6c8;
+    --text: #3a1018;
+    --muted: #7a4a52;
+    --accent: #9b1b30;
+    --accent-hover: #b3263f;
+    --accent-ink: #ffffff;
+    --gold: #a97a1e;
+    --gold-bright: #d9b45a;
+    --gold-light: #fbe7a8;
+    --line: #e3c98a;
+    --rose: #e8798b;
+    --shadow: 0 10px 30px rgba(94, 20, 36, 0.14);
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"],
+  :root.dark {
+    --bg: #22050c;
+    --surface: #340c15;
+    --surface2: #48131f;
+    --text: #fbeedd;
+    --muted: #d9b0b6;
+    --accent: #c2284a;
+    --accent-hover: #dc3259;
+    --accent-ink: #ffffff;
+    --gold: #e6c26e;
+    --gold-bright: #f4d98a;
+    --gold-light: #faeec7;
+    --line: #6b2b38;
+    --rose: #f0899a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Segoe UI", system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  }
+
+  .font-hand {
+    font-family: "Caveat", "Segoe Script", "Bradley Hand", cursive;
+  }
+}
+
+/* Animations & effects */
+@keyframes shake {
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+.animate-bob {
+  animation: bob 1.2s infinite ease-in-out;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}

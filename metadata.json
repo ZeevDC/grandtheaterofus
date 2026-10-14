@@ -1,0 +1,8 @@
+{
+  "name": "The Grand Theatre of Us: Squad Edition",
+  "description": "An imperial interactive memory theatre dedicated to the Squad, featuring personal letters, photo memories, interactive games, coupons, and celebratory surprises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
