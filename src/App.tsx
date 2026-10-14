@@ -829,6 +829,7 @@ const PHOTOS: string[] = [
   '/memories/photo-3.jpg',
   '/memories/photo-4.jpg',
   '/memories/photo-5.jpg',
+  '/memories/photo-6.jpg',
 ];
 
 // Base photo memory array
